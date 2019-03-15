@@ -7,8 +7,8 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/SimplyFold"]
-	path = bundle/SimplyFold
+[submodule "bundle/SimpylFold"]
+	path = bundle/SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold.git
 [submodule "bundle/indentpython"]
 	path = bundle/indentpython
