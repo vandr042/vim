@@ -9,11 +9,14 @@ map \s :source ~/.vimrc<CR>
 set hidden
 set history=100
 filetype indent on
+
+" Tab settings
 set nowrap
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
+
 autocmd BufWritePre * :%s/\s\+$//e
 set hlsearch
 nnoremap \\ :e#<CR>
