@@ -16,7 +16,6 @@ set expandtab
 set autoindent
 autocmd BufWritePre * :%s/\s\+$//e
 set hlsearch
-nnoremap <silent> <Esc> :nohlsearch<BAR>:echo<CR>
 nnoremap \\ :e#<CR>
 set showmatch
 
@@ -42,5 +41,3 @@ autocmd BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
-
-set clipboard=unnamed
