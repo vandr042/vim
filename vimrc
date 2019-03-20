@@ -14,6 +14,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
+set backspace=indent,eol,start
 autocmd BufWritePre * :%s/\s\+$//e
 set hlsearch
 nnoremap <silent> <Esc> :nohlsearch<BAR>:echo<CR>
