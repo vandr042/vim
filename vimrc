@@ -9,6 +9,8 @@ map \s :source ~/.vimrc<CR>
 set hidden
 set history=100
 filetype indent on
+
+" Tab settings
 set nowrap
 set shiftwidth=4
 set softtabstop=4
@@ -17,7 +19,6 @@ set autoindent
 set backspace=indent,eol,start
 autocmd BufWritePre * :%s/\s\+$//e
 set hlsearch
-nnoremap <silent> <Esc> :nohlsearch<BAR>:echo<CR>
 nnoremap \\ :e#<CR>
 set showmatch
 
@@ -43,5 +44,3 @@ autocmd BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
-
-set clipboard=unnamed
