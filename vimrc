@@ -12,6 +12,9 @@ set hidden
 set history=100
 filetype indent on
 
+" Company Copyright String
+map :nv :0r ~/.vim/nvidia_copyright.txt
+
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> 
 
