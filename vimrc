@@ -1,6 +1,6 @@
 execute pathogen#infect()
 
-filetype plugin indent on
+" filetype plugin indent on
 syntax on
 filetype on
 set background=dark
@@ -11,6 +11,8 @@ map \s :source ~/.vimrc<CR>
 set hidden
 set history=100
 filetype indent on
+
+set relativenumber
 
 " Company Copyright String
 map :nv :0r ~/.vim/nvidia_copyright.txt
@@ -56,24 +58,26 @@ autocmd BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 " vim-powerline
+set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim/
+set t_Co=256
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
+set showtabline=1
 set encoding=utf-8 " Necessary to show Unicode glyphs
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized'
-
+ 
 " syntastic
 let g:syntastic_python_checkers = []
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_python_checkers = ["flake8"]
-" let g:syntastic_python_python_exec = 'python3'
-
-:xnoremap :norm.
-
+ " set statusline+=%#warningmsg#
+ " set statusline+=%{SyntasticStatuslineFlag()}
+ " set statusline+=%*
+ 
+ " let g:syntastic_always_populate_loc_list = 1
+ " let g:syntastic_auto_loc_list = 1
+ " let g:syntastic_check_on_open = 1
+ " let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ["flake8"]
+ " let g:syntastic_python_python_exec = 'python3'
+ 
+xnoremap . :norm . 
