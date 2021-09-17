@@ -18,7 +18,10 @@ set relativenumber
 map :nv :0r ~/.vim/nvidia_copyright.txt
 
 " Remove all trailing whitespace by pressing F5
-nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> 
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+inoremap jk <esc>
+inoremap <esc> <nop>
+
 
 " Tab settings
 set nowrap
@@ -45,7 +48,9 @@ vmap <leader>ns :NoteFromSelectedText<CR>
 " Folding
 set foldmethod=indent
 set foldlevel=99
+set foldignore=
 nnoremap <space> za
+nnoremap <leader><space> zA
 
 " Python file settings
 autocmd BufNewFile,BufRead *.py
@@ -57,6 +62,16 @@ autocmd BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
+" YAML File Settings {{{
+autocmd BufNewFile,BufRead *.yaml
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+" }}}
 " vim-powerline
 set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim/
 set t_Co=256
@@ -66,18 +81,18 @@ set showtabline=1
 set encoding=utf-8 " Necessary to show Unicode glyphs
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized'
- 
+
 " syntastic
 let g:syntastic_python_checkers = []
  " set statusline+=%#warningmsg#
  " set statusline+=%{SyntasticStatuslineFlag()}
  " set statusline+=%*
- 
+
  " let g:syntastic_always_populate_loc_list = 1
  " let g:syntastic_auto_loc_list = 1
  " let g:syntastic_check_on_open = 1
  " let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ["flake8"]
  " let g:syntastic_python_python_exec = 'python3'
- 
-xnoremap . :norm . 
+
+xnoremap . :norm .
