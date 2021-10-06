@@ -1,12 +1,15 @@
 execute pathogen#infect()
 
+" Themes & airline
+set background=dark
+let g:solarized_termtrans = 1 " This gets rid of the grey background
+let g:airline_theme='solarized'
+colorscheme solarized 
+let g:airline_powerline_fonts = 1
+
 " filetype plugin indent on
 syntax on
 filetype on
-set background=dark
-colorscheme solarized
-set guifont=Menlo\ Regular:h18
-set number
 map \s :source ~/.vimrc<CR>
 set hidden
 set history=100
@@ -14,14 +17,10 @@ filetype indent on
 
 set relativenumber
 
-" Company Copyright String
-map :nv :0r ~/.vim/nvidia_copyright.txt
-
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 inoremap jk <esc>
 inoremap <esc> <nop>
-
 
 " Tab settings
 set nowrap
